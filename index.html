@@ -1,37 +1,14 @@
 <html>
 	<head>
-		<style>
-			body {
-				margin: 0px;
-			}
+		<link rel="stylesheet" type="text/css" href="style.css">
 
-			#mainFrame {
-				border: 0px;
-				width: 100%;
-				height: 100%;
-			}
-		</style>
+		<script src="base-image-handler.js"></script>
+		
+		<script src="image-drag.js"></script>
+		<script src="image-delete.js"></script>
+		<script src="image-add.js"></script>
+
+		<script src="website-wrapper.js"></script>
 	</head>
-
-	<body>
-		<iframe id="mainFrame" src="http://hannaeckert.de"></iframe>
-
-		<script src="image-dragger.js"></script>
-		<script>
-			var electron = require('electron')
-
-			let frame = document.getElementById('mainFrame')
-			let frameWindow = frame.contentWindow
-
-			frameWindow.addEventListener('load', () => {
-				let frameDocument = frameWindow.document
-
-				new ImageDragger(
-					  frameWindow
-					, frameDocument
-					, electron.remote.require('./main').updateImages
-				)
-			})
-		</script>
-	</body>
+	<body></body>
 </html>
