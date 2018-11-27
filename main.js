@@ -32,7 +32,7 @@ exports.updateImages = function(images) {
 
 	fs.writeFile(config.file, images.join('\n'), error => {
 		if(error) { throw error }
-g
+
 		let ftp = new Ftp()
 		ftp.on('ready', () => {
 			ftp.put(config.file, config.file, error => {
