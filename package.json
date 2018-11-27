@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-manager",
+  "version": "1.0.0",
+  "description": "Electron app for managing my portfolio website",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HannaEckert/portfolio-manager.git"
+  },
+  "keywords": [
+    "portfolio",
+    "manager"
+  ],
+  "author": "Hanna Eckert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HannaEckert/portfolio-manager/issues"
+  },
+  "homepage": "https://github.com/HannaEckert/portfolio-manager#readme",
+  "devDependencies": {
+    "electron": "^3.0.10"
+  }
+}

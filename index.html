@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0px;
+			}
+
+			#mainFrame {
+				border: 0px;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<iframe id="mainFrame" src="http://hannaeckert.de"></iframe>
+
+		<script src="image-dragger.js"></script>
+		<script>
+			var electron = require('electron')
+
+			let frame = document.getElementById('mainFrame')
+			let frameWindow = frame.contentWindow
+
+			frameWindow.addEventListener('load', () => {
+				let frameDocument = frameWindow.document
+
+				new ImageDragger(
+					  frameWindow
+					, frameDocument
+					, electron.remote.require('./main').updateImages
+				)
+			})
+		</script>
+	</body>
+</html>
