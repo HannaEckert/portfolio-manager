@@ -7,13 +7,15 @@ const BrowserWindow = electron.BrowserWindow
 
 function createWindow() {
 	let mainWindow = new BrowserWindow({ 
-		  width: 300
+		  width: 350
 		, height: 1000 
 		, webPreferences: {
 			zoomFactor: 0.2
 		}
+		, icon: './icon.png'
 	})
 
+	mainWindow.setMenuBarVisibility(false)
 	mainWindow.loadURL(`file://${__dirname}/index.html`)
 	// mainWindow.webContents.openDevTools()
 }
@@ -22,11 +24,11 @@ app.on('ready', createWindow)
 
 // Function exports
 
-exports.getUrl = function() {
+exports.getUrl = () => {
 	return config.url
 }
 
-exports.updateImages = function(images) {
+exports.updateImages = images => {
 	const fs = require('fs')
 	const Ftp = require('ftp')
 

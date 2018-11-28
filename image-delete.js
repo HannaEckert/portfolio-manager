@@ -31,4 +31,3 @@ class ImageDelete extends BaseImageHandler {
 		this.connectHandlers()
 	}
 }
-
